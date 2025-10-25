@@ -83,7 +83,8 @@ const Clients = () => {
   }
 
   return (
-    <section className="w-full bg-black text-white py-24 px-6 lg:px-16 relative overflow-hidden">
+    <section className="w-full bg-black text-white py-24 px-6 lg:px-16 relative overflow-hidden font-sans
+    ">
       <div className="mx-auto flex flex-col md:flex-row justify-between gap-20">
         {/* Left Column */}
         <div className="md:w-1/3 space-y-10">
