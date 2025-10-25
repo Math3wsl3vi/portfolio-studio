@@ -54,27 +54,31 @@ const Footer = () => {
 
         {/* Right side contact section */}
         <div className="flex flex-col justify-end md:w-2/5 space-y-8">
-          <p className="text-sm leading-relaxed text-[#d8c4a9]">
-            I partner with those who value thoughtful, intentional work that
-            speaks with purpose. If you’re ready to be heard, I’m ready to
-            listen.
-          </p>
+            <p className="text-sm leading-relaxed text-[#d8c4a9]">
+              I partner with those who value thoughtful, intentional work that
+              speaks with purpose. If you’re ready to be heard, I’m ready to
+              listen.
+            </p>
 
-          <div className="border-t border-[#b8a48c] pt-6 space-y-4">
-            <a
-              href="mailto:levimathews9841@gmail.com"
-              className="block text-sm font-mono tracking-widest uppercase hover:underline"
-            >
-              Send me an Email
-            </a>
-            <a
-              href="#"
-              className="block text-sm font-mono tracking-widest uppercase hover:underline"
-            >
-              Schedule a call
-            </a>
+            <div className="border-t border-[#b8a48c] pt-6 space-y-4">
+              <a
+                href="mailto:levimathews9841@gmail.com"
+                className="block text-sm font-mono tracking-widest uppercase hover:underline"
+              >
+                Send me an Email
+              </a>
+
+              {/* PowerPoint download link */}
+              <a
+                href="/Portfolio.pptx"
+                download="Portfolio.pptx"
+                className="block text-sm font-mono tracking-widest uppercase hover:underline"
+              >
+                Download Portfolio
+              </a>
+            </div>
           </div>
-        </div>
+
       </div>
     </footer>
   );
