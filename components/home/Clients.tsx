@@ -87,17 +87,18 @@ const Clients = () => {
       <div className="mx-auto flex flex-col md:flex-row justify-between gap-20">
         {/* Left Column */}
         <div className="md:w-1/3 space-y-10">
-          <div>
-            <h3 className="font-semibold text-sm tracking-wide mb-3 uppercase">
-              We build
-            </h3>
-            <ul className="space-y-1 text-gray-200">
-              <li>Digital products, apps, and services</li>
-              <li>Large-scale digital platforms</li>
-              <li>Digital editorial products</li>
-              <li>Brands and design systems</li>
-            </ul>
-          </div>
+        <div>
+          <h3 className="font-semibold text-sm tracking-wide mb-3 uppercase">
+            I Craft
+          </h3>
+          <ul className="space-y-1 text-gray-200">
+            <li>Digital experiences that move people</li>
+            <li>Web & mobile applications with intent and precision</li>
+            <li>Scalable platforms that blend logic with emotion</li>
+            <li>Design systems that breathe identity into brands</li>
+          </ul>
+        </div>
+
           <div>
             <h3 className="font-semibold text-sm tracking-wide mb-3 uppercase">
               For
