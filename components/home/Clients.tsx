@@ -37,7 +37,7 @@ const Clients = () => {
       testimonial:
         '"The attention to detail and smooth delivery made the Chakulahub platform a joy to use."',
       url: 'https://chakulahub.co.ke',
-      name: 'Grace Mwangi',
+      name: 'Beldina Mogaka',
       role: 'Founder, Chakulahub',
     },
     Bloom: {
@@ -51,7 +51,7 @@ const Clients = () => {
       testimonial:
         '"They modernized our brand identity while keeping it rooted in authenticity."',
       url: 'https://phone-store-seven-lovat.vercel.app/',
-      name: 'Emily Wong',
+      name: 'Christabel Anyango',
       role: 'Brand Manager, Premium Phones',
     },
     Riviamed: {
