@@ -1,7 +1,6 @@
 import type { Metadata } from "next";
 import { Geist, Geist_Mono, Inter, Poppins } from "next/font/google";
 import "./globals.css";
-import Navbar from "@/components/home/Navbar";
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -26,8 +25,8 @@ const poppins = Poppins({
 });
 
 export const metadata: Metadata = {
-  title: "Mantle kenya",
-  description: "  Innova • Afficere • Ascende",
+  title: "Levi Kulei",
+  description: "Full Stack Developer",
 };
 
 export default function RootLayout({
@@ -37,8 +36,7 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body className={`${geistSans.variable} ${geistMono.variable} ${inter.variable}  ${poppins.variable}`}>
-        <Navbar/>
+      <body className={`${geistSans.variable} ${geistMono.variable} ${inter.variable}  ${poppins.variable} bg-black`}>
         {children}
       </body>
     </html>

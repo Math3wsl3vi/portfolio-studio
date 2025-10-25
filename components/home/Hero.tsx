@@ -2,7 +2,28 @@ import React from "react";
 
 const Hero = () => {
   return (
-    <section className="h-[70vh] bg-black text-white flex flex-col relative overflow-hidden">
+    <section className="h-screen bg-black text-white flex flex-col relative overflow-hidden">
+      {/* Navbar */}
+      <div className="bg-transparent text-white font-serif">
+        <nav className="flex justify-between items-center px-8 py-6">
+          <h1 className="text-2xl font-serif font-semibold">Kulei</h1>
+        </nav>
+      </div>
+
+      {/* Background Image - Responsive */}
+      <div className="absolute inset-0 w-full h-full pointer-events-none">
+        <div
+          className="absolute top-0 right-0 w-full md:w-1/2 h-full bg-cover bg-center opacity-20 z-50 transition-all duration-500"
+          style={{
+            backgroundImage: "url('/images/official4.jpeg')",
+            maskImage:
+              "linear-gradient(to left, black 0%, transparent 100%)",
+            WebkitMaskImage:
+              "linear-gradient(to left, black 0%, transparent 100%)",
+          }}
+        ></div>
+      </div>
+
       {/* Subtle Ambient Light */}
       <div className="absolute inset-0 bg-[radial-gradient(circle_at_center,rgba(255,255,255,0.05)_0%,transparent_70%)] pointer-events-none"></div>
 
@@ -24,7 +45,7 @@ const Hero = () => {
 
       {/* Hero Content */}
       <div className="flex-1 flex flex-col justify-center items-center text-center px-6 relative z-10 font-serif">
-        <h1 className="text-4xl md:text-6xl font-light leading-tight max-w-3xl font-serif tracking-wide text-white/90">
+        <h1 className="text-4xl md:text-6xl font-light leading-tight max-w-3xl tracking-wide text-white/90">
           <span className="block mb-3 text-white/70">Levi Kulei</span>
           <span className="block text-white/90">
             Where logic meets silence,<br />and design learns to dream.

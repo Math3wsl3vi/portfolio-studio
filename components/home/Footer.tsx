@@ -13,9 +13,10 @@ const Footer = () => {
             </p>
 
             <h2 className="text-[2.5rem] md:text-[4.5rem] leading-[1.1] font-extrabold uppercase">
-              Great design isn’t just about what you make—it’s about who you
-              make it with.
+              Design isn’t just creation, it’s communion.  
+              It’s the silent dialogue between vision and the one bold enough to shape it.
             </h2>
+
           </div>
 
           {/* Footer small links + social icons */}
@@ -23,7 +24,6 @@ const Footer = () => {
             <ul className="flex flex-wrap gap-4 text-xs text-[#9d8a76] uppercase">
               <li className="hover:underline cursor-pointer">Terms</li>
               <li className="hover:underline cursor-pointer">Privacy</li>
-              <li className="hover:underline cursor-pointer">Site by Jordan</li>
             </ul>
 
             <div className="flex items-center gap-5">

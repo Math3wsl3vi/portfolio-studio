@@ -1,6 +1,6 @@
 'use client'
 
-import React, { useState, useRef, useEffect } from 'react'
+import React, { useState, useRef } from 'react'
 import { motion, AnimatePresence } from 'framer-motion'
 
 const Clients = () => {
@@ -8,32 +8,73 @@ const Clients = () => {
   const [popupPosition, setPopupPosition] = useState<'left' | 'right'>('right')
   const containerRef = useRef<HTMLUListElement>(null)
 
-  const testimonials: Record<string, string> = {
-    Mantle:
-      '“A transformative collaboration! The Mantle team brought our digital vision to life with precision and creativity.”',
-    'Carbon And Soil Loop Africa':
-      '“They understood our mission and turned complex sustainability data into a beautiful digital story.”',
-    'Tumalock Deal':
-      '“From idea to execution, flawless. The Tumalock project redefined what we thought possible.”',
-    Chakulahub:
-      '“The attention to detail and smooth delivery made the Chakulahub platform a joy to use.”',
-    Bloom:
-      '“Brilliant UI/UX and a deeply thoughtful design process. Absolutely stellar team.”',
-    'Premium Phones':
-      '“They modernized our brand identity while keeping it rooted in authenticity. Couldn’t recommend them more.”',
-    Riviamed:
-      '“A seamless healthcare platform build — elegant, fast, and reliable.”',
-    'Mantle Telemedicine':
-      '“This team merged healthcare and tech perfectly. Exceptional work on Mantle Telemedicine.”',
+  const clientData: Record<
+    string,
+    { testimonial: string; url: string; name: string; role: string }
+  > = {
+    Mantle: {
+      testimonial:
+        '"A transformative collaboration! The Mantle team brought our digital vision to life with precision and creativity."',
+      url: 'https://mantlekenya.vercel.app/',
+      name: 'Levi Mathews',
+      role: 'CEO, Mantle',
+    },
+    'Carbon And Soil Loop Africa': {
+      testimonial:
+        '"They understood our mission and turned complex sustainability data into a beautiful digital story."',
+      url: 'https://www.carbonsoil.africa/',
+      name: 'Sylvia Soti',
+      role: 'Founder, Carbon And Soil Loop Africa',
+    },
+    'Tumalock Deal': {
+      testimonial:
+        '"From idea to execution, flawless. The Tumalock project redefined what we thought possible."',
+      url: 'https://tumalock.com',
+      name: 'Rogers Kimutai',
+      role: 'Founder, Tumalock Deal',
+    },
+    Chakulahub: {
+      testimonial:
+        '"The attention to detail and smooth delivery made the Chakulahub platform a joy to use."',
+      url: 'https://chakulahub.co.ke',
+      name: 'Grace Mwangi',
+      role: 'Founder, Chakulahub',
+    },
+    Bloom: {
+      testimonial:
+        '"COMING SOON!"',
+      url: 'https://bloom.example.com',
+      name: '',
+      role: '',
+    },
+    'Premium Phones': {
+      testimonial:
+        '"They modernized our brand identity while keeping it rooted in authenticity."',
+      url: 'https://phone-store-seven-lovat.vercel.app/',
+      name: 'Emily Wong',
+      role: 'Brand Manager, Premium Phones',
+    },
+    Riviamed: {
+      testimonial:
+        '"A seamless healthcare platform build — elegant, fast, and reliable."',
+      url: 'https://riviamedsystem.vercel.app/',
+      name: 'Laura Anyango',
+      role: 'Medical Director, Riviamed',
+    },
+    'Mantle Telemedicine': {
+      testimonial:
+        '"This team merged healthcare and tech perfectly. Exceptional work on Mantle Telemedicine."',
+      url: 'https://mantle-telemedicine.vercel.app/',
+      name: 'Levi Mathews',
+      role: 'CTO, Mantle Telemedicine',
+    },
   }
 
-  // Determine if popup should go left or right depending on available space
   const handleHover = (client: string, e: React.MouseEvent) => {
     setHoveredClient(client)
     const rect = e.currentTarget.getBoundingClientRect()
     const screenWidth = window.innerWidth
 
-    // Check if right side has enough space
     if (rect.right + 350 > screenWidth) {
       setPopupPosition('left')
     } else {
@@ -57,7 +98,6 @@ const Clients = () => {
               <li>Brands and design systems</li>
             </ul>
           </div>
-
           <div>
             <h3 className="font-semibold text-sm tracking-wide mb-3 uppercase">
               For
@@ -69,6 +109,24 @@ const Clients = () => {
               <li>Mission-focused startups</li>
             </ul>
           </div>
+
+          <div>
+          <h3 className="font-semibold text-sm tracking-wide mb-3 uppercase">
+            Stack
+          </h3>
+          <ul className="space-y-1 text-gray-200">
+            <li>Next.js & React.js</li>
+            <li>React Native</li>
+            <li>TypeScript & JavaScript (ES6+)</li>
+            <li>Tailwind CSS</li>
+            <li>Express.js (TypeScript)</li>
+            <li>Firebase (Firestore, Auth, Admin SDK)</li>
+            <li>PostgreSQL & Drizzle ORM</li>
+            <li>Zustand (State Management)</li>
+            <li>Node.js</li>
+          </ul>
+        </div>
+
 
           {/* Tree Icon */}
           <div className="pt-10">
@@ -97,14 +155,21 @@ const Clients = () => {
             ref={containerRef}
             className="space-y-2 text-[2rem] md:text-[3.5rem] leading-tight font-serif relative"
           >
-            {Object.keys(testimonials).map((client, index) => (
+            {Object.keys(clientData).map((client, index) => (
               <li
                 key={index}
                 onMouseEnter={(e) => handleHover(client, e)}
                 onMouseLeave={() => setHoveredClient(null)}
-                className="relative hover:underline underline-offset-[6px] decoration-[1px] transition-all duration-300 cursor-pointer"
+                className="relative"
               >
-                {client}
+                <a
+                  href={clientData[client].url}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="hover:underline underline-offset-[6px] decoration-[1px] transition-all duration-300 cursor-pointer inline-block"
+                >
+                  {client}
+                </a>
 
                 {/* Floating testimonial */}
                 <AnimatePresence>
@@ -120,7 +185,15 @@ const Clients = () => {
                           : 'right-full mr-8 origin-right'
                       }`}
                     >
-                      {testimonials[client]}
+                      <p className="mb-3">{clientData[client].testimonial}</p>
+                      <div className="border-t border-zinc-700 pt-3">
+                        <p className="font-semibold text-white">
+                          {clientData[client].name}
+                        </p>
+                        <p className="text-xs text-gray-400">
+                          {clientData[client].role}
+                        </p>
+                      </div>
                     </motion.div>
                   )}
                 </AnimatePresence>

@@ -23,7 +23,7 @@ const GallerySection = () => {
                 <Image
                   width={400}
                   height={400}
-                  src={isHoveredagain ? '/images/hero3.jpg' : '/images/hero1.jpg'}
+                  src={isHoveredagain ? '/images/official2.jpeg' : '/images/hero1.jpg'}
                   alt="Brand logo or related image"
                   className={`w-full h-full object-cover transition-all duration-700 ease-out ${
                     isHoveredagain ? 'scale-110' : 'scale-100'
@@ -33,7 +33,7 @@ const GallerySection = () => {
             </div>
             <div className="space-y-4">
               <h2 className="leading-tight font-poppins text-lg">
-                Nike: A global digital brand reset
+                The Art Beneath
               </h2>
             </div>
           </div>
@@ -70,7 +70,7 @@ const GallerySection = () => {
               )}
             </div>
             <h2 className="leading-tight font-poppins text-lg mt-5">
-                Nike: A global digital brand reset
+                The canvas
               </h2>
           </div>
         </div>
