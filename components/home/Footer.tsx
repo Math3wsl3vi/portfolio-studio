@@ -70,8 +70,8 @@ const Footer = () => {
 
               {/* PowerPoint download link */}
               <a
-                href="/Portfolio.pptx"
-                download="Portfolio.pptx"
+                href="/Portfolio.pdf"
+                download="Portfolio.pdf"
                 className="block text-sm font-mono tracking-widest uppercase hover:underline"
               >
                 Download Portfolio
